@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+    Uri="https://securdendevops.github.io/appinstaller/Securden.appinstaller"
+    Version="1.1.13.0"
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2018">
+
+  <MainPackage
+      Name="com.securden"
+      Publisher="CN=Securden, Inc."
+      Version="1.1.13.0"
+      Uri="https://securdendevops.github.io/appinstaller/securden_vault_1_1_13.msix" />
+
+  <UpdateSettings>
+      <OnLaunch HoursBetweenUpdateChecks="0"/>
+      <AutomaticBackgroundTask/>
+  </UpdateSettings>
+
+</AppInstaller>

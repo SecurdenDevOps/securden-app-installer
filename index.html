@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Securden App Installer</title>
+    <style>
+        #snackbar {
+            visibility: hidden;
+            min-width: fit-content;
+            min-height: fit-content;
+            margin: 0 auto;
+            justify-content: center;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            text-align: center;
+            right: 30px;
+            top: 30px;
+            font-size: 17px;
+        }
+
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+
+            to {
+                top: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                top: 0;
+                opacity: 0;
+            }
+
+            to {
+                top: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                top: 30px;
+                opacity: 1;
+            }
+
+            to {
+                top: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                top: 30px;
+                opacity: 1;
+            }
+
+            to {
+                top: 0;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+</head>
+
+<body>
+    <button type="button" onclick="copyToClipboard('securden_vault_1_1_13.msix')">Copy MSIX Link</button>
+    <button type="button" onclick="copyToClipboard('Securden.appinstaller')">Copy App Installer Link</button>
+
+    <div id="snackbar"></div>
+
+    <script>
+        function copyToClipboard(filename) {
+            const url = new URL(filename, window.location.href).href;
+            navigator.clipboard.writeText(url).then(() => notify("Copied to clipboard " + url));
+        }
+
+        function notify(msg) {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            x.textContent = msg;
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+
+</html>
