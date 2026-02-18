@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AppInstaller
-    Uri="https://securdendevops.github.io/appinstaller/Securden.appinstaller"
-    Version="1.1.13.0"
-    xmlns="http://schemas.microsoft.com/appx/appinstaller/2018">
+<AppInstaller Uri="https://securdendevops.github.io/securden-app-installer/Securden.appinstaller"
+              Version="1.1.13.0"
+              xmlns="http://schemas.microsoft.com/appx/appinstaller/2018">
 
-  <MainPackage
-      Name="com.securden"
-      Publisher="CN=Securden, Inc."
-      Version="1.1.13.0"
-      Uri="https://securdendevops.github.io/appinstaller/securden_vault_1_1_13.msix" />
+  <MainPackage Name="SecurdenInc.SecurdenDesktopPasswordVault"
+               Publisher="CN=&quot;Securden, Inc.&quot;, O=&quot;Securden, Inc.&quot;, L=Newark, S=Delaware, C=US, SERIALNUMBER=6782349, OID.2.5.4.15=Private Organization, OID.1.3.6.1.4.1.311.60.2.1.2=Delaware, OID.1.3.6.1.4.1.311.60.2.1.3=US"
+               Version="1.1.13.0"
+               ProcessorArchitecture="x64"
+               Uri="https://securdendevops.github.io/securden-app-installer/securden_vault_1_1_13.msix" />
 
   <UpdateSettings>
-      <OnLaunch HoursBetweenUpdateChecks="0"/>
-      <AutomaticBackgroundTask/>
+    <OnLaunch HoursBetweenUpdateChecks="0"/>
+    <AutomaticBackgroundTask/>
   </UpdateSettings>
 
 </AppInstaller>
+
